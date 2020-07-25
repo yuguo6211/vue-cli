@@ -1,5 +1,6 @@
 <template>
     <div class="base">
+        <p>base组件</p>
         <!-- 文本{{}} -->
         <h1>h1文本：{{text}}</h1>
 
@@ -27,25 +28,27 @@
         <button @click="clickHandler">事件绑定</button>
 
         <!-- 事件修饰符 -->
-        <div @click="outClickHandler" style="width: 200px; height: 100px; margin: 10px auto; text-align: center;">
+        <div @click="outClickHandler" style="background-color: #ccc;;width: 200px; height: 100px; margin: 10px auto; text-align: center;">
             <button @click="inClickHandler">内部点击</button>
-            <!-- <button @click.stop="inClickHandler">内部点击</button> -->
+            <!-- <button @click.stop="inClickHandler">内部点击(.stop修饰符)</button> -->
         </div>
-        <!-- 子组件 -->
-        <!-- <subCompnonet /> -->
+        <!-- 子组件1 -->
+        <!-- <subCompnonet1 /> -->
+        <!-- 子组件2 -->
+        <!-- <subCompnonet2 /> -->
     </div>
 </template>
 
 <script>
-// import subCompnonet from './subComponent';
+// import subCompnonet1 from './subComponent1';
+// import subCompnonet2 from './subComponent2';
 
 export default {
     name: 'Base',
-    props: {
-        msg: String
-    },
+    props: {},
     components: {
-        // subCompnonet
+        // subCompnonet1,
+        // subCompnonet2
     },
     beforeCreate() {
         console.log('base beforeCreate');
